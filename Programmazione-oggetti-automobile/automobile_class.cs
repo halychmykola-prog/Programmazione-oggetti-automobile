@@ -182,31 +182,95 @@ namespace Programmazione_oggetti_automobile
         }
 
         // METODO ACCELERA
-
-        public void Accelera()
+        public string Accelera()
         {
-            Velocita = Velocita + 5;
+            string s;
+
+            if (StatoMotore == true)
+            {
+                if (Velocita < 350)
+                {
+                    Velocita = Velocita + 5;
+                    s = "L'automobile accelera";
+                }
+                else
+                {
+                    s = "Velocita massima raggiunta";
+                }
+            }
+            else
+            {
+                s = "Impossibile accelerare, motore spento";
+            }
+
+            return s;
+
         }
 
         // METODO DECELERA
-
-        public void Decelera()
+        public string Decelera()
         {
-            Velocita = Velocita - 5;
+            string s;
+
+            if (Velocita > 0)
+            {
+                if (Velocita >= 5)
+                {
+                    Velocita = Velocita - 5;
+                    s = "L'automobile decelera";
+                }
+                else
+                {
+                    Velocita = 0;
+                    s = "L'automobile si ferma";
+                }
+            }
+            else
+            {
+                s = "L'automobile e gia ferma";
+            }
+
+            return s;
+
         }
 
         // METODO ACCENDI
 
-        public void Accendi()
+        public string Accendi()
         {
-            StatoMotore = true;
+            string s;
+
+            if (StatoMotore == false)
+            {
+                StatoMotore = true;
+                s = "Motore acceso";
+            }
+            else
+            {
+                s = "Il motore e gia acceso";
+            }
+
+            return s;
+
         }
 
         // METODO SPEGNI
 
-        public void Spegni()
+        public string Spegni()
         {
-            StatoMotore = false;
+            string s;
+
+            if (StatoMotore == true)
+            {
+                StatoMotore = false;
+                s = "Motore spento";
+            }
+            else
+            {
+                s = "Il motore e gia spento";
+            }
+
+            return s;
         }
     }
 }
