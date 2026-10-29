@@ -91,7 +91,7 @@ public class Automobile
 
 		public Automobile()
 		{
-			_modello = "ZHopastiy";
+			_modello = "Z";
 			_potenza = 0;
 			_velocita = 0;
 			_motore = 0;
