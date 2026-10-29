@@ -167,5 +167,46 @@ namespace Programmazione_oggetti_automobile
             Velocita = 0;
             StatoMotore = false;
         }
+
+        // METODO ToString
+
+        public override string ToString()
+        {
+            string s;
+            s = "Modello: " + Modello + "\n";
+            s = s + "Potenza: " + Potenza + " CV\n";
+            s = s + "Marcia: " + Marcia + "\n";
+            s = s + "Velocita: " + Velocita + " km/h\n";
+            s = s + "Stato motore: " + StatoMotore + "\n";
+            return s;
+        }
+
+        // METODO ACCELERA
+
+        public void Accelera()
+        {
+            Velocita = Velocita + 5;
+        }
+
+        // METODO DECELERA
+
+        public void Decelera()
+        {
+            Velocita = Velocita - 5;
+        }
+
+        // METODO ACCENDI
+
+        public void Accendi()
+        {
+            StatoMotore = true;
+        }
+
+        // METODO SPEGNI
+
+        public void Spegni()
+        {
+            StatoMotore = false;
+        }
     }
 }
